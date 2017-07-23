@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Memefy.MemeView">
+
+    <StackLayout Margin="0" Orientation="Vertical">
+        <AbsoluteLayout HorizontalOptions="CenterAndExpand">
+            <Image x:Name="image" Aspect="AspectFit"/>
+            <Label x:Name="upperText" Margin="20" Text="THIS IS A MEMEBB" TextColor="White" BackgroundColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="0.7"></Label>
+        </AbsoluteLayout>
+    </StackLayout>
+
+</ContentPage>

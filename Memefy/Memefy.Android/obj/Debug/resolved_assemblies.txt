@@ -26,6 +26,9 @@ E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Xml.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Xml.Linq.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Runtime.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.ComponentModel.dll
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Reflection.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.IO.dll
@@ -34,9 +37,6 @@ E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Collections.
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.ObjectModel.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Globalization.dll
-E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.ComponentModel.dll
-E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
-E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Reflection.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\System.Threading.dll

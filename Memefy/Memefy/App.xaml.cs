@@ -13,7 +13,7 @@ namespace Memefy
 		{
 			InitializeComponent();
 
-			MainPage = new Memefy.MainPage();
+            MainPage = new NavigationPage(new MenuPage());
 		}
 
 		protected override void OnStart ()

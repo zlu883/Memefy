@@ -22,7 +22,6 @@ E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
 E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Xamarin.Forms.Xaml.xml
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Android.csprojResolveAssemblyReference.cache
-E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MainPage.xaml.g.cs
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.App.xaml.g.cs
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Android.dll
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Android.pdb
@@ -65,3 +64,6 @@ E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\Plugin.Media.Abstra
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\Plugin.Media.dll.mdb
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\res\drawable\defaultface.png
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MenuPage.xaml.g.cs
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MemeView.xaml.g.cs
