@@ -100,6 +100,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "Memefy.Android.dll" comes first in this list. */
 		"Memefy.Android.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.Azure.Mobile.Client.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Media.Abstractions.dll",
 		"Plugin.Media.dll",

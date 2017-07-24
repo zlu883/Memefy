@@ -67,3 +67,10 @@ E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\android\assets\Plugin.Permissions.
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\res\drawable\defaultface.png
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MenuPage.xaml.g.cs
 E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MemeView.xaml.g.cs
+E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Newtonsoft.Json.dll
+E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Newtonsoft.Json.xml
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MemeList.xaml.g.cs
+E:\MSA\Memefy\Memefy\Memefy.Android\obj\Debug\Memefy.Droid.MemeEdit.xaml.g.cs
+E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Memefy.Android.dll.config
+E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Microsoft.Azure.Mobile.Client.dll
+E:\MSA\Memefy\Memefy\Memefy.Android\bin\Debug\Microsoft.Azure.Mobile.Client.xml
