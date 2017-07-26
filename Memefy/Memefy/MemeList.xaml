@@ -3,32 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Memefy.MemeList"
              Title="ListView">
-  <ListView ItemsSource="{Binding ItemsGrouped}"
+  <ListView x:Name="memeList" 
+      ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
             ItemSelected="Handle_ItemSelected"
             HasUnevenRows="true"
-            GroupShortNameBinding="{Binding Key}"
-            IsGroupingEnabled="true"
-            GroupDisplayBinding="{Binding Key}"
             IsPullToRefreshEnabled="true"
             CachingStrategy="RecycleElement"
             IsRefreshing="{Binding IsBusy, Mode=OneWay}"
             RefreshCommand="{Binding RefreshDataCommand}">
     <ListView.Header>
       <StackLayout Padding="10" 
-                   Orientation="Horizontal"
+                   Orientation="Vertical"
                    HorizontalOptions="FillAndExpand"
-                   BackgroundColor="#dadada">
-        <Button Text="Add Meme"
-               HorizontalOptions="FillAndExpand"
+                   BackgroundColor="White">
+        <Button x:Name="addMemeButton" Text="Add Meme"
+                IsEnabled="False"
+               HorizontalOptions="Center"
                TextColor="Black"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               Clicked="AddMeme"/>
       </StackLayout>
     </ListView.Header>
     <!--Built in Cells-->
     <ListView.ItemTemplate>
       <DataTemplate>
-          <TextCell Text="{Binding Caption}"></TextCell>
+          <TextCell Text="{Binding FullCaption}"></TextCell>
       </DataTemplate>
     </ListView.ItemTemplate>
     

@@ -19,13 +19,21 @@ namespace Memefy
     public partial class MemeList : ContentPage
     {
         MobileServiceClient client;
+        MemeListViewModel model;
 
-        public MemeList(List<MemeCaptions> captionsList)
+        public MemeList()
         {
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
+            retrieveMemeList();
+        }
 
-            BindingContext = new MemeListViewModel(captionsList);
+        public async void retrieveMemeList()
+        {
+            List<MemeCaptions> captionsList = await AzureManager.AzureManagerInstance.GetCaptionList();
+            model = new MemeListViewModel(captionsList);
+            BindingContext = model;
+            addMemeButton.IsEnabled = true;
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -36,14 +44,19 @@ namespace Memefy
             if (e.SelectedItem == null)
                 return;
 
-            await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
+            await Navigation.PushAsync(new MemeEdit((MemeCaptions)e.SelectedItem, false, model));
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
         }
+
+        private async void AddMeme(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MemeEdit(null, true, model));
+        }
     }
 
-    class MemeListViewModel : INotifyPropertyChanged
+    public class MemeListViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<MemeCaptions> Items { get; }
         public ObservableCollection<Grouping<string, MemeCaptions>> ItemsGrouped { get; }
@@ -52,12 +65,12 @@ namespace Memefy
         {
             Items = new ObservableCollection<MemeCaptions>(items);
 
-            var sorted = from item in Items
-                         orderby item.Caption
-                         group item by item.Caption[0].ToString() into itemGroup
-                         select new Grouping<string, MemeCaptions>(itemGroup.Key, itemGroup);
+            //var sorted = from item in Items
+            //             orderby item.UpperCaption
+            //             group item by item.UpperCaption[0].ToString() into itemGroup
+            //             select new Grouping<string, MemeCaptions>(itemGroup.Key, itemGroup);
 
-            ItemsGrouped = new ObservableCollection<Grouping<string, MemeCaptions>>(sorted);
+            //ItemsGrouped = new ObservableCollection<Grouping<string, MemeCaptions>>(sorted);
 
             RefreshDataCommand = new Command(
                 async () => await RefreshData());
@@ -65,12 +78,9 @@ namespace Memefy
 
         public ICommand RefreshDataCommand { get; }
 
-        async Task RefreshData()
+        public async Task RefreshData()
         {
             IsBusy = true;
-            //Load Data Here
-            await Task.Delay(2000);
-
             IsBusy = false;
         }
 

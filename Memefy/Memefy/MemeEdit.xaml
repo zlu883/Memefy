@@ -2,4 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Memefy.MemeEdit">
+    
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label HorizontalOptions="Start" Text="Top caption:"></Label>
+            <Editor VerticalOptions="Start" Text="{Binding UpperCaption}"></Editor>
+            <Label HorizontalOptions="Start" Text="Bottom caption:"></Label>
+            <Editor VerticalOptions="Start" Text="{Binding LowerCaption}"></Editor>
+            <Label HorizontalOptions="Start" Text="Neutral value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding NeutralVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Happiness value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding HappinessVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Sadness value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding SadnessVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Anger value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding AngerVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Fear value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding FearVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Contempt value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding ContemptVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Disgust value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding DisgustVal}"></Slider>
+            <Label HorizontalOptions="Start" Text="Surprise value:"></Label>
+            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding SurpriseVal}"></Slider>
+            <Button HorizontalOptions="Center" Text="Save" Clicked="SaveMeme"></Button>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

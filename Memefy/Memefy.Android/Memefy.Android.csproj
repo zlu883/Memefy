@@ -127,6 +127,7 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\LeagueGothic-Regular.otf" />
     <None Include="app.config" />
+    <AndroidAsset Include="Assets\impact.ttf" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

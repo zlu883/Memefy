@@ -5,7 +5,7 @@
 
     <StackLayout Margin="20" Orientation="Vertical" >
         <Image x:Name="image" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Aspect="AspectFit"/>
-        <Button Text="Memefy!!" Clicked="LoadCamera" VerticalOptions="End"/>
+        <Button Text="Memefy!!" Clicked="MemefyPhoto" VerticalOptions="End"/>
         <Button Text="Manage Memes" Clicked="ShowList" VerticalOptions="End"/>
     </StackLayout>
     

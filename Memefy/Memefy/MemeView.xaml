@@ -3,12 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Memefy.MemeView">
 
-    <StackLayout Margin="0" Orientation="Vertical">
-        <AbsoluteLayout HorizontalOptions="CenterAndExpand">
+    <StackLayout IsVisible="True" Margin="0" Orientation="Vertical">
+        <AbsoluteLayout x:Name="memePhoto" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image x:Name="image" Aspect="AspectFit"/>
-            <Label x:Name="upperText" Margin="20" Text="THIS IS A MEMEBB" TextColor="White" BackgroundColor="Black" FontSize="48" 
-                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="0.7"></Label>
+            
+            <Label x:Name="upperCaptionShadowTop" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowTopLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowTopRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0.005, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0.005, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowBottom" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.012, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowBottomLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0.012, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="upperCaptionShadowBottomRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0.012, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+
+            <Label x:Name="lowerCaptionShadowTop" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.845, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowTopLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0.845, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowTopRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0.845, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0.85, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0.85, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowBottom" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.857, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowBottomLeft" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.45, 0.857, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            <Label x:Name="lowerCaptionShadowBottomRight" Margin="0" TextColor="Black" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.55, 0.857, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+
+            <Label x:Name="upperCaption" Margin="0" TextColor="White" FontSize="48" 
+                   HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.005, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
+            
+            <Label x:Name="lowerCaption" Margin="0" TextColor="White" FontSize="48" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="End" LineBreakMode="WordWrap" Opacity="1"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.85, 1, 0.5" AbsoluteLayout.LayoutFlags="All"></Label>
         </AbsoluteLayout>
+        <ActivityIndicator x:Name="indicator" VerticalOptions="CenterAndExpand" IsRunning="False"></ActivityIndicator>
     </StackLayout>
 
 </ContentPage>

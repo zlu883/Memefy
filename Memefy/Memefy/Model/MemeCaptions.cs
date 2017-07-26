@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Memefy.Model
@@ -10,8 +11,13 @@ namespace Memefy.Model
         [JsonProperty(PropertyName = "Id")]
         public string ID { get; set; }
 
-        [JsonProperty(PropertyName = "caption")]
-        public string Caption { get; set; }
+        [JsonProperty(PropertyName = "upperCaption")]
+        public string UpperCaption { get; set; }
+
+        [JsonProperty(PropertyName = "lowerCaption")]
+        public string LowerCaption { get; set; }
+
+        public string FullCaption { get; set; }
 
         [JsonProperty(PropertyName = "angerVal")]
         public double AngerVal { get; set; }
