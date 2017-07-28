@@ -18,7 +18,6 @@ namespace Memefy
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MemeList : ContentPage
     {
-        MobileServiceClient client;
         MemeListViewModel model;
 
         public MemeList()
@@ -30,10 +29,20 @@ namespace Memefy
 
         public async void retrieveMemeList()
         {
+            indicator.IsRunning = true;
+
             List<MemeCaptions> captionsList = await AzureManager.AzureManagerInstance.GetCaptionList();
+            foreach (MemeCaptions meme in captionsList)
+            {
+                meme.computeFullCaption();
+            }
             model = new MemeListViewModel(captionsList);
             BindingContext = model;
             addMemeButton.IsEnabled = true;
+
+            indicator.IsRunning = false;
+            memeList.IsVisible = true;
+            indicatorLayout.IsVisible = false;
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -41,6 +50,7 @@ namespace Memefy
 
         async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            
             if (e.SelectedItem == null)
                 return;
 

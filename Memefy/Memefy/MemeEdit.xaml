@@ -2,31 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Memefy.MemeEdit">
-    
-    <ScrollView>
-        <StackLayout Margin="20">
-            <Label HorizontalOptions="Start" Text="Top caption:"></Label>
-            <Editor VerticalOptions="Start" Text="{Binding UpperCaption}"></Editor>
-            <Label HorizontalOptions="Start" Text="Bottom caption:"></Label>
-            <Editor VerticalOptions="Start" Text="{Binding LowerCaption}"></Editor>
-            <Label HorizontalOptions="Start" Text="Neutral value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding NeutralVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Happiness value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding HappinessVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Sadness value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding SadnessVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Anger value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding AngerVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Fear value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding FearVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Contempt value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding ContemptVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Disgust value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding DisgustVal}"></Slider>
-            <Label HorizontalOptions="Start" Text="Surprise value:"></Label>
-            <Slider Maximum="1.0" Minimum="0.0" Value="{Binding SurpriseVal}"></Slider>
-            <Button HorizontalOptions="Center" Text="Save" Clicked="SaveMeme"></Button>
-        </StackLayout>
-    </ScrollView>
+    <StackLayout>
+        <ActivityIndicator x:Name="indicator" VerticalOptions="CenterAndExpand" IsRunning="False" IsVisible="False"></ActivityIndicator>
+        <ScrollView x:Name="scrollView">
+            <StackLayout Margin="20">
+                <Label HorizontalOptions="Start" Text="Top caption:"></Label>
+                <Editor x:Name="upperCaptionEditor" VerticalOptions="Start"></Editor>
+                <Label HorizontalOptions="Start" Text="Bottom caption:"></Label>
+                <Editor x:Name="lowerCaptionEditor" VerticalOptions="Start"></Editor>
+                <Label HorizontalOptions="Start" Text="Neutral value:"></Label>
+                <Slider x:Name="neutralSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Happiness value:"></Label>
+                <Slider x:Name="happinessSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Sadness value:"></Label>
+                <Slider x:Name="sadnessSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Anger value:"></Label>
+                <Slider x:Name="angerSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Fear value:"></Label>
+                <Slider x:Name="fearSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Contempt value:"></Label>
+                <Slider x:Name="contemptSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Disgust value:"></Label>
+                <Slider x:Name="disgustSlider" Maximum="1.0" Minimum="0.0"></Slider>
+                <Label HorizontalOptions="Start" Text="Surprise value:"></Label>
+                <Slider x:Name="surpriseSlider" Maximum="1.0" Minimum="0.0"></Slider>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button HorizontalOptions="Start" VerticalOptions="Start" Text="Save" Clicked="SaveMeme"></Button>
+                    <Button x:Name="deleteButton" HorizontalOptions="End" VerticalOptions="End" Text="Delete" IsEnabled="False" Clicked="DeleteMeme"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 
 </ContentPage>

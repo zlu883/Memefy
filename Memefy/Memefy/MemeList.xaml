@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Memefy.MemeList"
              Title="ListView">
-  <ListView x:Name="memeList" 
+    <StackLayout>
+        <AbsoluteLayout x:Name="indicatorLayout" VerticalOptions="CenterAndExpand">
+            <ActivityIndicator x:Name="indicator" VerticalOptions="CenterAndExpand" IsRunning="False" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                           AbsoluteLayout.LayoutFlags="All"></ActivityIndicator>
+        </AbsoluteLayout>
+        <ListView x:Name="memeList" 
       ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
             ItemSelected="Handle_ItemSelected"
@@ -11,29 +16,30 @@
             IsPullToRefreshEnabled="true"
             CachingStrategy="RecycleElement"
             IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-            RefreshCommand="{Binding RefreshDataCommand}">
-    <ListView.Header>
-      <StackLayout Padding="10" 
+            RefreshCommand="{Binding RefreshDataCommand}"
+            IsVisible="False">
+            <ListView.Header>
+                <StackLayout Padding="10" 
                    Orientation="Vertical"
                    HorizontalOptions="FillAndExpand"
                    BackgroundColor="White">
-        <Button x:Name="addMemeButton" Text="Add Meme"
+                    <Button x:Name="addMemeButton" Text="Add Meme"
                 IsEnabled="False"
                HorizontalOptions="Center"
                TextColor="Black"
                FontAttributes="Bold"
                Clicked="AddMeme"/>
-      </StackLayout>
-    </ListView.Header>
-    <!--Built in Cells-->
-    <ListView.ItemTemplate>
-      <DataTemplate>
-          <TextCell Text="{Binding FullCaption}"></TextCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    
-    <!--Custom View Cells-->
-    <!--
+                </StackLayout>
+            </ListView.Header>
+            <!--Built in Cells-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FullCaption, Mode=OneWay}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <!--Custom View Cells-->
+            <!--
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
@@ -47,7 +53,7 @@
       </DataTemplate>
     </ListView.ItemTemplate>
     -->
-    <!--<ListView.Footer>
+            <!--<ListView.Footer>
       <StackLayout Padding="10"
                    Orientation="Horizontal"
                    HorizontalOptions="FillAndExpand"
@@ -59,5 +65,6 @@
                FontAttributes="Bold"/>
       </StackLayout>
     </ListView.Footer>-->
-  </ListView>
+        </ListView>
+    </StackLayout>
 </ContentPage>

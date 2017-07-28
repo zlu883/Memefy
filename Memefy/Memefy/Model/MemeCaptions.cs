@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Memefy.Model
 {
-    public class MemeCaptions
+    public class MemeCaptions : INotifyPropertyChanged
     {
         [JsonProperty(PropertyName = "Id")]
         public string ID { get; set; }
@@ -42,5 +42,20 @@ namespace Memefy.Model
 
         [JsonProperty(PropertyName = "surpriseVal")]
         public double SurpriseVal { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void computeFullCaption()
+        {
+            this.FullCaption = UpperCaption + " " + LowerCaption;
+            FullCaption = FullCaption.Trim();
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this,
+                    new PropertyChangedEventArgs("FullCaption"));
+            }
+        }
     }
+
+    
 }

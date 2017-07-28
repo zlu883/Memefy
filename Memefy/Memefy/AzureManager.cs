@@ -42,5 +42,20 @@ namespace Memefy
         {
             return await this.CaptionTable.ToListAsync();
         }
+
+        public async Task CreateNewMeme(MemeCaptions meme)
+        {
+            await this.CaptionTable.InsertAsync(meme);
+        }
+
+        public async Task UpdateMeme(MemeCaptions meme)
+        {
+            await this.CaptionTable.UpdateAsync(meme);
+        }
+
+        public async Task DeleteMeme(MemeCaptions meme)
+        {
+            await this.CaptionTable.DeleteAsync(meme);
+        }
     }
 }
